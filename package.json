@@ -1,0 +1,45 @@
+{
+  "name": "gs_styledcomponents",
+  "version": "0.0.1",
+  "description": "10 React Styledcomponents implemented using css modules for Web Programming course in Reykjavik University",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --config jest.config.js --watch",
+    "start": "webpack-dev-server --config webpack.dev.js --color --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gunsobal/styledcomponents.git"
+  },
+  "author": "Gunnar Örn Baldursson <gunnarb16@ru.is>",
+  "contributor": [
+    "Sæþór Hallgrímsson <saethor16@ru.is>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gunsobal/styledcomponents/issues"
+  },
+  "homepage": "https://github.com/gunsobal/styledcomponents#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "html-webpack-plugin": "^3.0.6",
+    "jest": "^22.4.2",
+    "path": "^0.12.7",
+    "sinon": "^4.4.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
