@@ -33,13 +33,16 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'css-loader',
-                    options: {
-                        modules: true,
-                        localIdentName: '[name]__[local]__[hash:base64:5]'
+                use: [
+                    require.resolve('style-loader'),
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name]__[local]__[hash:base64:5]'
+                        }
                     }
-                }
+                ]
             }
         ]
     }

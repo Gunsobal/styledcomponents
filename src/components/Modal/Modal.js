@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './Modal.css';
+import styles from './Modal.css';
+
+console.log(styles);
 
 class Modal extends React.Component {
     render() {
         return (
-            <div>Modal</div>
+            <div className={`${styles.modal}`}>Modal</div>
         )
     }
 }
