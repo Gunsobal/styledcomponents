@@ -1,4 +1,3 @@
 .modal {
-    color: pink;
-    height: 450px;
+    display: flex;
 }
