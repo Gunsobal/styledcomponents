@@ -20,7 +20,7 @@ describe('ProgressBar tests', () => {
         expect(stub.notCalled).toBe(true);
     });
 
-    it('should have same with and progress', () => {
+    it('should have same width and progress', () => {
         const component = shallow(<ProgressBar progress={20} striped={false} animated={false} state={'success'} />);
 
         expect(component.find('span').first().prop('style').width).toEqual('20%');        
