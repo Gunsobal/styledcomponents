@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProgressBar.css';
 
-console.log(styles);
-
 const ProgressBar = ({ progress, striped, animated, state}) => (
     <div className={`${styles['progress-container']} ${animated ? styles.animate : null}`}>
         <span className={`${styles[`progress-bar`]} ${striped ? styles['progress-bar-striped'] : null} ${styles[`progress-${state}`]}`} style={{width: `${progress}%`}}>

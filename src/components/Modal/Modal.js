@@ -2,43 +2,51 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Modal.css';
 
-console.log(styles);
+const Modal = ({ children, isOpen, onClose }) => {
+    return (
+        <div className={styles.container} 
+             style={{display: isOpen ? 'flex' : 'none'}}
+             onClick={onClose}>
+            <div className={styles.modal}
+                 onClick={(e) => e.stopPropagation()}
+            >
+                {children}
+            </div>
+        </div>  
+    )
+};
 
-class Modal extends React.Component {
-    render() {
-        return (
-            <div className={`${styles.modal}`}>Modal</div>
-        )
-    }
-}
+Modal.Title = ({ children }) => {
+    return (
+        <h4 className={`${styles.title} ${styles.common}`}>
+            {children}
+        </h4>
+    )
+};
 
-Modal.Title = class Title extends React.Component {
-    render() {
-        return (
-            <div>Title</div>
-        )
-    }
-}
 
-Modal.Body = class Body extends React.Component {
-    render() {
-        return (
-            <div>Body</div>
-        )
-    }
-}
+Modal.Body = ({ children }) => {
+    return (
+        <div className={`${styles.body} ${styles.common}`}>
+            {children}
+        </div>  
+    )
+};
 
-Modal.Footer = class Footer extends React.Component {
-    render() {
-        return (
-            <div>Footer</div>
-        )
-    }
-}
+Modal.Footer = ({ children }) => {
+    return (
+        <div className={`${styles.footer} ${styles.common}`}>
+            {children}
+        </div>
+    )
+};
 
 Modal.propTypes = {
     /** Control whether to display this modal or not */
     isOpen: PropTypes.bool,
+
+    /** Child nodes */
+    children: PropTypes.node,
 
     /** Handler for when this modal is closed */
     onClose: PropTypes.func.isRequired
@@ -46,6 +54,21 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
     isOpen: false
+};
+
+Modal.Title.propTypes = {
+    /** Child nodes */
+    children: PropTypes.node
+};
+
+Modal.Body.propTypes = {
+    /** Child nodes */
+    children: PropTypes.node
+};
+
+Modal.Footer.propTypes = {
+    /** Child nodes */
+    children: PropTypes.node
 };
 
 export default Modal;

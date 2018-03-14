@@ -8,7 +8,11 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Modal onClose={() => {}} />
+                <Modal onClose={() => {}} isOpen={true}>
+                    <Modal.Title />
+                    <Modal.Body />
+                    <Modal.Footer />
+                </Modal>
                 <h2>ProgressBar.js</h2>
                 <hr />
                 <ProgressBar 
