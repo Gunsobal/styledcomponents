@@ -4,5 +4,6 @@ module.exports = {
     testPathIgnorePatterns: [
         '<rootDir>/node_modules/'
     ],
-    setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js'
+    setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
+    transform: {'.*': '<rootDir>/node_modules/jest-css-modules'}
 }
