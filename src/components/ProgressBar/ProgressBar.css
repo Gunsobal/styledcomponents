@@ -1,0 +1,77 @@
+/* Source of animation and stripe: https://css-tricks.com/css3-progress-bars/ */
+
+@keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+}
+
+.progress-container { 
+	height: 1.5em;
+	position: relative;
+	background: gray;
+	border-radius: .4em;
+}
+
+.progress-bar {
+    display: block;
+    height: 100%;
+    border-top-right-radius: .1em;
+    border-bottom-right-radius: .1em;
+    border-top-left-radius: .4em;
+    border-bottom-left-radius: .4em;
+    position: relative;
+    overflow: hidden;
+  }
+
+.progress-info {
+    background-color: blue;
+}
+
+.progress-success {
+    background-color: green;
+}
+
+.progress-warning {
+    background-color: orange;
+}
+
+.progress-danger {
+    background-color: red;
+}
+
+.progress-bar:after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    
+    z-index: 1;
+    
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar-striped:after {
+    background-image: linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, .2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .2) 50%, 
+        rgba(255, 255, 255, .2) 75%, 
+        transparent 75%, 
+        transparent
+    );
+    background-size: 50px 50px;
+}
+
+.animate > .progress-bar:after, .animate > .progress-bar-striped:after {
+    animation: move 2s linear infinite;
+
+}

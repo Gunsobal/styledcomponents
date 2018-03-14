@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Modal from './components/Modal/Modal';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 class App extends React.Component {
     render() {
         return (
             <div>
                 <Modal onClose={() => {}} />
+                <h2>ProgressBar.js</h2>
+                <hr />
+                <ProgressBar 
+                    progress={20}
+                    striped={true}
+                    animated={true}
+                    state={'warning'} />
             </div>
         );
     }
