@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+.tabs-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: .5em;
+}
+
+.tabs-dark {
+    background: black;
+    color: white;
+}
+
+.tabs-light {
+    background: white;
+    color: black;
+}
+
+.tabs-horizontal {
+    flex-direction: row;
+    width: 100%;
+}
+
+.tabs-vertical {
+    flex-direction: column;
+    width: 20%;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 0.5em 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.tab:hover {
+    background-color: gray;              
+}
+
+.tab-content {
+    padding: 1em;
+}
+
+.tab-content-horizontal {
+    width: 100%;
+}
+
+.tab-content-vertical    {
+    width: 80%;
+}
