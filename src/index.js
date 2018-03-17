@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CN from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
+import { CartoonNetworkSpinner } from './lib';
+
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                <CN interval={1} />
+                <CartoonNetworkSpinner />
             </div>
         );
     }
