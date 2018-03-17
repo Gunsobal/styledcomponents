@@ -57,6 +57,13 @@ describe('Modal tests', () => {
         expect(clicked).toBe(true);
     });
     
+    it('should trigger onClose handler when span is clicked', () => {
+        let clicked = false;
+        const component = shallow(<Modal isOpen={true} onClose={() => clicked = true} />);
+        component.find('span').first().simulate('click');
+        expect(clicked).toBe(true);
+    });
+    
     it('should not trigger onClose handler when modal element of container div is clicked', () => {
         let clicked = false;
         const mockStopPropagation = jest.fn();

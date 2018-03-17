@@ -11,23 +11,49 @@
 }
 
 .modal {
+    position: relative;
     background: #fff;
-    box-shadow: 2px 2px 2px #888;
+    box-shadow: 2px 2px 4px #888;
+    border: 1px solid rgba(11, 68, 99, 1);
+    border-radius: 4px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background: #033f63;
+    color: #fff;
+    padding: .2em;
+    font-size: 14px;
+}
+
+.close:hover {
+    opacity: .5;
+}
+
+.close:active {
+    transform: translateY(1px);
 }
 
 .common {
     margin: 0;
-    padding: .5em .25em;
+    padding: .4em 1.5em .4em .7em;
+    font-size: 18px;
 }
 
 .title {
-    color: pink;   
+    background: #033f63;
+    color: #ffF;
 }
 
 .body {
-
+    padding: 1em 1.5em 1em .7em;
 }
 
 .footer {
-
+    background: #033f63;
+    color: #fff;
+    font-size: 16px;
 }

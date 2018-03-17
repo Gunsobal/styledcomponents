@@ -7,9 +7,8 @@ const Modal = ({ children, isOpen, onClose }) => {
         <div className={styles.container} 
              style={{display: isOpen ? 'flex' : 'none'}}
              onClick={onClose}>
-            <div className={styles.modal}
-                 onClick={(e) => e.stopPropagation()}
-            >
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+                <span className={styles.close} onClick={onClose}>&times;</span>
                 {children}
             </div>
         </div>  
