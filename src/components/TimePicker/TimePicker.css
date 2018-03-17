@@ -1,0 +1,28 @@
+.visual {
+    display: flex;
+    align-items: center;
+    padding: 3em;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    font-size: 2em;
+    width: 2em;
+    text-align: center;
+    border-radius: .1em;
+    
+    border: 1px solid black;
+}
+
+.change {
+    font-size: 2em;
+    background: none;
+    border: none;
+}
