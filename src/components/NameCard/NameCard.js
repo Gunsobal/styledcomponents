@@ -4,8 +4,27 @@ import styles from './NameCard.css';
 
 const NameCard = ({ name, email, telephone, imageUrl }) => {
     return (
-        <div className={styles.container}>
-            
+        <div className={styles.namecard}>
+            <figure className={styles.profile} style={{backgroundImage: `url(${imageUrl})`}}/>
+            <div className={styles.info} >
+                <h5 className={styles.name}>{name}</h5>
+                <div className={styles.contact}>
+                    <div className={styles.icon}>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div className={styles.text}>
+                        {email}
+                    </div>
+                </div>
+                <div className={styles.contact}>
+                    <div className={styles.icon}>
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div className={styles.text}>
+                        {telephone}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 };

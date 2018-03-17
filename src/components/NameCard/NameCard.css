@@ -1,3 +1,53 @@
-.container {
+.namecard {
     display: flex;
+    box-shadow: 2px 2px 4px #888;
+    border: 1px solid rgba(129, 128, 128, .3);
+    padding: 1em 1em .6em 1em;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.profile {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    margin-right: 1em;
+}
+
+.info {
+    flex: 1 1 auto;
+    padding-left: 1em;
+    border-left: 2px solid #033f63;
+}
+
+.name {
+    margin: 0;
+    margin-bottom: .5em;
+    padding: .5em;
+    color: #033f63;
+    border-bottom: 2px solid #033f63;
+    font-size: 24px;
+    font-style: bold;
+}
+
+.icon {
+    background: #033f63;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: .5em;
+    margin-right: 1em;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    margin-bottom: .5em;
 }

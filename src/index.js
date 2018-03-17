@@ -5,7 +5,7 @@ import ProgressBar from './components/ProgressBar/ProgressBar';
 import Modal from './components/Modal/Modal';
 import TimePicker from './components/TimePicker/TimePicker';
 import Carousel from './components/Carousel/Carousel';
-
+import NameCard from './components/NameCard/NameCard';
 
 class App extends React.Component {
     constructor(props) {
@@ -24,13 +24,20 @@ class App extends React.Component {
                     </Modal.Body>
                     <Modal.Footer>Footie text</Modal.Footer>
                 </Modal>
+                <div style={{width: '20%'}}>
+                <NameCard 
+                    name={"Gunnar Örn Baldursson"}
+                    email={"gunnarorn.91@gmail.com"}
+                    telephone={"+354 846 6836"}
+                    imageUrl={"https://www.ocf.berkeley.edu/~dblab/blog/wp-content/uploads/2012/01/icon-profile.png"}
+                />
+                </div>
                 <Carousel 
                     images={[
                         'http://i0.kym-cdn.com/photos/images/newsfeed/001/149/102/6f3.png',
                         'https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Bugs_Bunny.svg/1200px-Bugs_Bunny.svg.png',
                         'https://vignette.wikia.nocookie.net/looneytunes/images/0/05/Daffy-duck_00402319.png'
                     ]}
-                    size={'small'}
                 />
             </div>
         );
