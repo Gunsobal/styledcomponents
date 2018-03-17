@@ -27,17 +27,10 @@ class Carousel extends React.Component {
         const { images, size } = this.props;
         const { selected } = this.state;
         return (
-            <div className={`${styles.carousel} ${styles[size]}`}>
-                <button onClick={() => this.slideLeft()}>&lt;</button>
-                <div className={styles.slider}>{images.map((image, index) => {
-                    return (
-                        <figure key={index} className={styles.image} style={{display: index == selected ? 'flex' : 'none'}}
-                            ><img src={image} />
-                        </figure>
-                    )
-                })}</div>
-                <button onClick={() => this.slideRight()}>&gt;</button>
-            </div>
+            <figure className={`${styles.carousel} ${styles[size]}`} style={{backgroundImage: `url(${images[selected]})`}}>
+                <button className={styles.control} onClick={() => this.slideLeft()}>&lt;</button>
+                <button className={styles.control} onClick={() => this.slideRight()}>&gt;</button>
+            </figure>
         )
     }
 }

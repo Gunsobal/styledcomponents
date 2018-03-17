@@ -76,28 +76,27 @@ describe('Carousel component tests', () => {
         expect(component.state().selected).toBe(0);
     });
 
-    it('should render an img tag with src of first image', () => {
+    it('should render a figure with a backgroundImage of selected image', () => {
         const src = 'image.png';
 
         const component = shallow(<Carousel images={[src, 'foo']} />);
 
-        expect(component.find('img').first().props().src).toBe(src);
+        expect(component.find('figure').first().props().style.backgroundImage).toBe(`url(${src})`);
     });
 
     it('should render the next image in an array when last button is clicked', () => {
         const component = shallow(<Carousel images={['image1', 'image2']} />);
 
-        expect(component.find('figure').last().props().style.display).toBe('none');
+        expect(component.find('figure').first().props().style.backgroundImage).toBe(`url(image1)`);
         component.find('button').last().simulate('click');
-        expect(component.find('figure').last().props().style.display).toBe('flex');
+        expect(component.find('figure').first().props().style.backgroundImage).toBe(`url(image2)`);
     });
-    
+
     it('should render the previous image in an array when first button is clicked', () => {
-        const component = shallow(<Carousel images={['image1', 'image2']} />);
-        component.setState({selected: 1});
-        
-        expect(component.find('figure').first().props().style.display).toBe('none');
+        const component = shallow(<Carousel images={['image1', 'image2', 'image3']} />);
+
+        expect(component.find('figure').first().props().style.backgroundImage).toBe(`url(image1)`);
         component.find('button').first().simulate('click');
-        expect(component.find('figure').first().props().style.display).toBe('flex');
+        expect(component.find('figure').first().props().style.backgroundImage).toBe(`url(image3)`);
     });
 });

@@ -1,34 +1,47 @@
 .carousel {
     display: flex;
     align-items: center;
-}
-
-.slider {
-    width: 100%;
-}
-
-.image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     margin: 0;
-}
-
-.image img {
-    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .small {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    font-size: 18px;
 }
 
 .medium {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
+    font-size: 28px;
 }
 
 .large {
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
+    font-size: 30px;
+}
+
+.control {
+    background: #033f63;
+    font-style: bold;
+    font-size: inherit;
+    padding: .5em;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    opacity: .5;
+    border-radius: 50%;
+}
+
+.control:hover {
+    opacity: 1;
+}
+
+.control:active {
+    transform: translateY(1px);
 }
