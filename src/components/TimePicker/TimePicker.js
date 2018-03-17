@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './TimePicker.css';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faAngleDown, faAngleUp } from '@fortawesome/fontawesome-free-solid';
 
 class TimePicker extends React.Component {
     constructor(props) {
@@ -63,13 +65,13 @@ class TimePicker extends React.Component {
                 <div className={`${styles.visual}`}>
                     <span className={`${styles.picker}`}>
                         <button className={`${styles.change}`} onClick={() => this.setHour(this.increment(this.state.hour, this.props.format))}>
-                            <i className="fas fa-angle-up"></i>
+                            <FontAwesomeIcon icon={faAngleUp} />
                         </button>
                         <span className={`${styles.value}`}>
                             <input type="text" value={this.state.hour} onChange={e => this.setHour(e.target.value)} className={`${styles.input}`} />
                         </span>                        
                         <button className={`${styles.change}`} onClick={() => this.setHour(this.decrement(this.state.hour, this.props.format))}>
-                            <i className="fas fa-angle-down"></i>                                                            
+                            <FontAwesomeIcon icon={faAngleDown} />
                         </button>
                     </span>
                     <span className={`${styles.seperator}`}>
@@ -77,13 +79,13 @@ class TimePicker extends React.Component {
                     </span>
                     <span className={`${styles.picker}`}>
                         <button className={`${styles.change}`} onClick={() => this.setMinutes(this.increment(this.state.minutes, 59))}>
-                            <i className="fas fa-angle-up" ></i>                       
+                            <FontAwesomeIcon icon={faAngleUp} />
                         </button>
                         <span className={`${styles.value}`}>
                             <input type="text" value={this.state.minutes} onChange={e => this.setMinutes(e.target.value)} className={`${styles.input}`} />
                         </span>
                         <button className={`${styles.change}`} onClick={() => this.setMinutes(this.decrement(this.state.minutes, 59))}>
-                            <i className="fas fa-angle-down"></i>                                                        
+                            <FontAwesomeIcon icon={faAngleDown} />
                         </button>
                     </span>
                     { this.props.format === 12 ?
@@ -93,13 +95,13 @@ class TimePicker extends React.Component {
                         </span>
                         <span className={`${styles.picker}`}>
                             <button className={`${styles.change}`} onClick={() => this.setPeriod(this.state.period === 'AM' ? 'PM' : 'AM' )}>
-                                <i className="fas fa-angle-up"></i>                            
+                                <FontAwesomeIcon icon={faAngleUp} />
                             </button>
                             <span className={`${styles.value}`}>
                                 <input type="text" value={this.state.period} onChange={e => this.setPeriod(e.target.value)} className={`${styles.input}`} />
                             </span>
                             <button className={`${styles.change}`} onClick={() => this.setPeriod(this.state.period === 'AM' ? 'PM' : 'AM' )}>
-                                <i className="fas fa-angle-down"></i>                                
+                                <FontAwesomeIcon icon={faAngleDown} />
                             </button>
                         </span>
                     </Fragment>

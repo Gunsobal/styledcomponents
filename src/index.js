@@ -24,7 +24,8 @@ class App extends React.Component {
                     </Modal.Body>
                     <Modal.Footer>Footie text</Modal.Footer>
                 </Modal>
-                <div style={{width: '20%'}}>
+                {/* <TimePicker /> */}
+                <div style={{width: '30%'}}>
                 <NameCard 
                     name={"Gunnar Örn Baldursson"}
                     email={"gunnarorn.91@gmail.com"}
