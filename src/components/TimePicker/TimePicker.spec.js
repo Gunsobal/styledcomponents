@@ -26,4 +26,6 @@ describe('TimePicker tests', () => {
         expect(component.find('input').length).toBe(1);
     });
 
+    
+
 });

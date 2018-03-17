@@ -29,7 +29,7 @@ class App extends React.Component {
                 */}
                 <h2>TimePicker.js</h2>
                 <hr />
-                <TimePicker onTimePick={() => {}} format={12} />
+                <TimePicker onTimePick={() => {}} format={24} />
                 <h2>ProgressBar.js</h2>
                 <hr />
                 <ProgressBar 

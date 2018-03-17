@@ -60,7 +60,6 @@ class TimePicker extends React.Component {
         const { onTimePick, format } = this.props;
         return (
             <div>
-                <input type="time" />
                 <div className={`${styles.visual}`}>
                     <span className={`${styles.picker}`}>
                         <button className={`${styles.change}`} onClick={() => this.setHour(this.increment(this.state.hour, this.props.format))}>
