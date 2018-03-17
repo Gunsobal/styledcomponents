@@ -1,11 +1,12 @@
 {
-  "name": "gs_styledcomponents",
+  "name": "gs-styled-components",
   "version": "0.0.1",
   "description": "10 React Styledcomponents implemented using css modules for Web Programming course in Reykjavik University",
-  "main": "src/index.js",
+  "main": "dist/gs-styled-components.js",
   "scripts": {
     "test": "jest --config jest.config.js --watch",
-    "start": "webpack-dev-server --config webpack.dev.js --color --mode development"
+    "start": "webpack-dev-server --config webpack.dev.js --color --mode development",
+    "build": "webpack --config webpack.prod.js --mode production"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "postcss-loader": "^2.1.1",
     "sinon": "^4.4.5",
     "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"

@@ -1,0 +1,141 @@
+.spinner {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 100%;
+    height: 100%;
+}
+
+.TasmanianDevil {
+    animation-name: tasmaniandevil;
+}
+
+.BugsBunny {
+    animation-name: bugsbunny;
+}
+
+.TomAndJerry {
+    animation-name: tomandjerry;
+}
+
+.DaffyDuck {
+    animation-name: daffyduck;
+}
+
+.WileECoyote {
+    animation-name: wileecoyote;
+}
+
+@keyframes tasmaniandevil {
+    0% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        background-image: url('./imgs/wilecoyote.jpg');
+    }
+    50% {
+        width: 0;
+        height: 0;
+        filter: blur(5px);
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(1440deg);
+        background-image: url('./imgs/tasmaniandevil.jpg');
+    }
+}
+
+@keyframes bugsbunny {
+    0% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        background-image: url('./imgs/tasmaniandevil.jpg');
+    }
+    50% {
+        width: 0;
+        height: 0;
+        filter: blur(5px);
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(1440deg);
+        background-image: url('./imgs/bugsbunny.jpg');
+    }
+}
+
+@keyframes tomandjerry{
+    0% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        background-image: url('./imgs/bugsbunny.jpg');
+    }
+    50% {
+        width: 0;
+        height: 0;
+        filter: blur(5px);
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(1440deg);
+        background-image: url('./imgs/tomandjerry.jpg');
+    }
+}
+
+@keyframes daffyduck{
+    0% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        background-image: url('./imgs/tomandjerry.jpg');
+    }
+    50% {
+        width: 0;
+        height: 0;
+        filter: blur(5px);
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(1440deg);
+        background-image: url('./imgs/daffyduck.jpg');
+    }
+}
+
+@keyframes wileecoyote{
+    0% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        background-image: url('./imgs/daffyduck.jpg');
+    }
+    50% {
+        width: 0;
+        height: 0;
+        filter: blur(5px);
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: rotate(1440deg);
+        background-image: url('./imgs/wilecoyote.jpg');
+    }
+}

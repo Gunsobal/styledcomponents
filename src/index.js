@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+<<<<<<< HEAD
 import tnj from '../resources/tomandjerry.png';
 import td from '../resources/tasmaniandevil.jpg';
 import bb from '../resources/bugsbunny.jpg';
@@ -12,6 +13,9 @@ import Col from './components/Col/Col';
 import Tabs from './components/Tabs/Tabs';
 import Tab from  './components/Tab/Tab';
 import TimePicker from './components/TimePicker/TimePicker';
+=======
+import { CartoonNetworkSpinner } from './lib';
+>>>>>>> 5128335dbddc3cc1e8a44b352be465cce456ce8e
 
 
 class App extends React.Component {
@@ -24,6 +28,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <Carousel 
                     images={[tnj, td, bb]}
                 />
@@ -123,6 +128,9 @@ class App extends React.Component {
                     
                     
                 </Row>
+=======
+                <CartoonNetworkSpinner />
+>>>>>>> 5128335dbddc3cc1e8a44b352be465cce456ce8e
             </div>
         );
     }

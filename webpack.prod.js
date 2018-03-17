@@ -1,25 +1,21 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: path.join(__dirname, 'src', 'index.js'),
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Styled Components',
-            template: path.join(__dirname, 'index.html'),
-            inject: 'body'
-        }),
-        new CleanWebpackPlugin(['dist'])
-    ],
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        open: true,
-        historyApiFallback: true
+    entry: path.join(__dirname, 'src', 'lib.js'),
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'gs-styled-components.js',
+        libraryTarget: 'commonjs2'
     },
+    externals: {
+        react: {
+            commonjs: 'react',
+            commonjs2: 'react'
+        }
+    },
+    plugins: [new CleanWebpackPlugin(['dist'])],
     module: {
         rules: [
             {
@@ -61,7 +57,12 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: {loader: 'file-loader'}
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000
+                    }
+                }
             }
         ]
     }
