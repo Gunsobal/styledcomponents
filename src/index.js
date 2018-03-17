@@ -24,6 +24,11 @@ class App extends React.Component {
                     </Modal.Body>
                     <Modal.Footer>Footie text</Modal.Footer>
                 </Modal>
+                <ProgressBar 
+                    striped={true}
+                    animated={true}
+                    progress={50}
+                />
                 {/* <TimePicker /> */}
                 <div style={{width: '30%'}}>
                 <NameCard 
