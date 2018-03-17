@@ -5,8 +5,18 @@ import Modal from './components/Modal/Modal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import Row from './components/Row/Row'
 import Col from './components/Col/Col';
+import Tabs from './components/Tabs/Tabs';
+import Tab from  './components/Tab/Tab';
+import TimePicker from './components/TimePicker/TimePicker';
+
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            tab: 1
+        }
+    }
     render() {
         return (
             <div>
@@ -17,6 +27,9 @@ class App extends React.Component {
                     <Modal.Footer />
                 </Modal>
                 */}
+                <h2>TimePicker.js</h2>
+                <hr />
+                <TimePicker onTimePick={() => {}} format={12} />
                 <h2>ProgressBar.js</h2>
                 <hr />
                 <ProgressBar 
@@ -24,6 +37,24 @@ class App extends React.Component {
                     striped={true}
                     animated={true}
                     state={'warning'} />
+
+                <h2>Tabs and tab</h2>
+                <hr />
+                <Tabs
+                    layout='horizontal'
+                    theme='dark'
+                    onSelect={tab => this.setState({ tab })}
+                    currentSelectedTab={this.state.tab}>
+                    <Tab title={"hæ"} selectionKey={1}>
+                        Content 1
+                    </Tab>
+                    <Tab title={"hæ2"} selectionKey={2}>
+                        Content 2
+                    </Tab>
+                    <Tab title={"hæ3"} selectionKey={3}>
+                        Content 3
+                    </Tab>
+                </Tabs>
                 <h2>Row</h2>
                 <hr />
                 <Row>
