@@ -6,16 +6,16 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'lib.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'gs-styled-components.js',
-        libraryTarget: 'commonjs2'
+        filename: 'index.js',
+        libraryTarget: 'umd',
+        library: 'GSStyledComponents'
     },
     externals: {
-        react: {
-            commonjs: 'react',
-            commonjs2: 'react'
-        }
+        react: {commonjs: 'react', commonjs2: 'react', umd: 'react'},
     },
-    plugins: [new CleanWebpackPlugin(['dist'])],
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+    ],
     module: {
         rules: [
             {
