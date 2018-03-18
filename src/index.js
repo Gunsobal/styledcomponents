@@ -6,6 +6,7 @@ import Modal from './components/Modal/Modal';
 import TimePicker from './components/TimePicker/TimePicker';
 import Carousel from './components/Carousel/Carousel';
 import NameCard from './components/NameCard/NameCard';
+import DatePicker from './components/DatePicker/DatePicker';
 
 class App extends React.Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <DatePicker onDatePick={() => {}}  />
                 <Modal isOpen={this.state.open} onClose={() => this.setState({open: false})}>
                     <Modal.Title>Title</Modal.Title>
                     <Modal.Body>
