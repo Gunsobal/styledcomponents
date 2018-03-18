@@ -14,6 +14,10 @@ class TimePicker extends React.Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        this.props.onTimePick(`${this.state.hour}:${this.state.hour}${this.props.format === 12 ? ` ${this.state.period}` : ''}`)
+    }
+
     increment(number, high) {
         number = parseInt(number);
         number++

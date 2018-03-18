@@ -19,6 +19,7 @@ class App extends React.Component {
         return (
             <div>
                 <DatePicker onDatePick={() => {}}  />
+                <TimePicker onTimePick={(e) => console.log(e)} format={12} />
                 <Modal isOpen={this.state.open} onClose={() => this.setState({open: false})}>
                     <Modal.Title>Title</Modal.Title>
                     <Modal.Body>

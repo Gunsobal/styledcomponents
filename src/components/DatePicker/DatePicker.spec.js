@@ -25,7 +25,7 @@ describe('Datepicker component test', () => {
     it('should call onDatePick when new date is selected', () => {
         const onDatePick = sinon.spy();
         const component = shallow(<DatePicker onDatePick={onDatePick}/>)
-        
+
         const dateBefore = component.instance().state.date;
         component.find('button').last().simulate('click');
 
