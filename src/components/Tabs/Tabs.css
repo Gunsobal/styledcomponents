@@ -27,11 +27,13 @@
 .tabs-horizontal {
     flex-direction: row;
     width: 100%;
+    border-bottom: 1px solid #033f63;
 }
 
 .tabs-vertical {
     flex-direction: column;
     width: 20%;
+    border-right: 1px solid #033f63;
 }
 
 .tab {
