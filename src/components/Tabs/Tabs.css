@@ -59,6 +59,10 @@
     color: #033f63;
 }
 
+.tab:active {
+    transform: translateY(1px);
+}
+
 .tab-content {
     padding: 1em;
 }

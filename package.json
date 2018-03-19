@@ -1,6 +1,6 @@
 {
-  "name": "gs-styled-components",
-  "version": "0.0.4",
+  "name": "gs-infinity-modules",
+  "version": "0.0.10",
   "description": "10 React Styledcomponents implemented using css modules for Web Programming course in Reykjavik University",
   "main": "dist/index.js",
   "scripts": {
