@@ -33,15 +33,15 @@
 }
 
 .progress-success {
-    background-color: rgb(13, 100, 13);
+    background-color: #146303;
 }
 
 .progress-warning {
-    background-color: rgb(233, 129, 44);
+    background-color: #633D03;
 }
 
 .progress-danger {
-    background-color: rgb(201, 24, 24);
+    background-color: #630303;
 }
 
 .progress-bar:after {
