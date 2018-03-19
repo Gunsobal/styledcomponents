@@ -28,19 +28,19 @@
   }
 
 .progress-info {
-    background-color: blue;
+    background-color: #033f63;
 }
 
 .progress-success {
-    background-color: green;
+    background-color: #146303;
 }
 
 .progress-warning {
-    background-color: orange;
+    background-color: #633D03;
 }
 
 .progress-danger {
-    background-color: red;
+    background-color: #630303;
 }
 
 .progress-bar:after {
