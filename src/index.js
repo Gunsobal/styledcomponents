@@ -78,43 +78,46 @@ class App extends React.Component {
                 <h3>Rows &amp; Cols</h3>
                 <Row>
                     <Col size={4}>
-                        <div style={{backgroundColor: 'red'}}>Size 4</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'red'}}>Size 4</div>
                     </Col>
                     <Col size={8}>
-                        <div style={{backgroundColor: 'red'}}>Size 8</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'red'}}>Size 8</div>
                     </Col>
                     <Col>
-                        <div style={{backgroundColor: 'red'}}>Size 1</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'red'}}>Size 1</div>
                     </Col>
                 </Row>
                 <Row>
                     <Col size={4}>
-                        <div style={{backgroundColor: 'blue'}}>Size 4</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'blue'}}>Size 4</div>
                     </Col>
                     <Col size={4}>
-                        <div style={{backgroundColor: 'blue'}}>Size 4</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'blue'}}>Size 4</div>
                     </Col>
                     <Col size={4}>
-                        <div style={{backgroundColor: 'blue'}}>Size 4</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'blue'}}>Size 4</div>
                     </Col>
                 </Row>
                 <Row>
                     <Col size={6}>
-                        <div style={{backgroundColor: 'yellow'}}>Size 6</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'yellow'}}>Size 6</div>
                     </Col>
                     <Col size={5}>
-                        <div style={{backgroundColor: 'yellow'}}>Size 5</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'yellow'}}>Size 5</div>
                     </Col>
                 </Row>
                 <Row>
                     <Col size={2}>
-                        <div style={{backgroundColor: 'green'}}>Size 2</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'green'}}>Size 2</div>
                     </Col>
                     <Col size={2}>
-                        <div style={{backgroundColor: 'green'}}>Size 2</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'green'}}>Size 2</div>
                     </Col>
                     <Col size={2}>
-                        <div style={{backgroundColor: 'green'}}>Size 2</div>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'white'}}>Size 2</div>
+                    </Col>
+                    <Col size={2}>
+                        <div style={{border: '1px solid black', padding: '1em', backgroundColor: 'green'}}>Size 2</div>
                     </Col>
                 </Row>
                 <hr />
