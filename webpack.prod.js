@@ -8,7 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         libraryTarget: 'umd',
-        library: 'GSStyledComponents'
+        library: 'GSInfinityModules'
     },
     externals: {
         react: {commonjs: 'react', commonjs2: 'react', umd: 'react'},
