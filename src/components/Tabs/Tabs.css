@@ -47,6 +47,10 @@
     background-color: #888;              
 }
 
+.tab:active {
+    transform: translateY(1px);
+}
+
 .tab-content {
     padding: 1em;
 }
