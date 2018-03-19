@@ -6,7 +6,7 @@ const Tabs = ({ theme, layout, currentSelectedTab, onSelect, children  }) => (
     <div className={`${styles['tabs-container']} ${styles[`tabs-${theme}`]}`}>
         <div className={`${styles.tabs} ${styles[`tabs-${layout}`]}`}>
             {children.length ? children.map(
-                child => <div className={`${styles.tab}`} key={child.props.selectionKey} onClick={() => onSelect(child.props.selectionKey)}>{child.props.title}</div>) 
+                child => <div className={`${styles.tab} ${child.props.selectionKey === currentSelectedTab ? styles.active : ''}`} key={child.props.selectionKey} onClick={() => onSelect(child.props.selectionKey)}>{child.props.title}</div>) 
                 : <div className={`${styles.tab}`} onClick={() => onSelect(children.props.selectionKey)}>{children.props.title}</div>
             }
         </div>

@@ -27,13 +27,11 @@
 .tabs-horizontal {
     flex-direction: row;
     width: 100%;
-    border-bottom: 1px solid #033f63;
 }
 
 .tabs-vertical {
     flex-direction: column;
     width: 20%;
-    border-right: 1px solid #033f63;
 }
 
 .tab {
@@ -43,8 +41,22 @@
     text-align: center;
 }
 
-.tab:hover {
-    background-color: #888;              
+.tabs-light .active { 
+    border-bottom: .2em solid #033f63;
+}
+
+.tabs-dark .active { 
+    border-bottom: .2em solid #fff;
+}
+
+.tabs-light .tab:hover {
+    background-color: #033f63;    
+    color: #fff; 
+}
+
+.tabs-dark .tab:hover {
+    background-color: #fff;
+    color: #033f63;
 }
 
 .tab-content {
