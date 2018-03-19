@@ -5,7 +5,10 @@ import styles from './Tabs.css'
 const Tabs = ({ theme, layout, currentSelectedTab, onSelect, children  }) => (
     <div className={`${styles['tabs-container']} ${styles[`tabs-${theme}`]}`}>
         <div className={`${styles.tabs} ${styles[`tabs-${layout}`]}`}>
-            {children.length ? children.map(child => <div className={`${styles.tab}`} key={child.props.selectionKey} onClick={() => onSelect(child.props.selectionKey)}>{child.props.title}</div>) : children}
+            {children.length ? children.map(
+                child => <div className={`${styles.tab}`} key={child.props.selectionKey} onClick={() => onSelect(child.props.selectionKey)}>{child.props.title}</div>) 
+                : <div className={`${styles.tab}`} onClick={() => onSelect(children.props.selectionKey)}>{children.props.title}</div>
+            }
         </div>
         <div className={`${styles['tab-content']} ${styles[`tab-content-${layout}`]}`}>
             {children.length ? children.find(child => child.props.selectionKey === currentSelectedTab) : children}
