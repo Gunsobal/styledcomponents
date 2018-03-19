@@ -51,11 +51,11 @@ class DatePicker extends React.Component {
                     <span className={`${styles.date}`}>{dateStr}</span>
                 </div>
                 <div className={`${styles.month}`}>
-                    <span onClick={() => this.setState({ month: new Date(month.getFullYear(), month.getMonth() - 1) })}>
+                    <span className={styles.control} onClick={() => this.setState({ month: new Date(month.getFullYear(), month.getMonth() - 1) })}>
                             &lt;
                     </span>
                     <span>{month.toLocaleString('en-EN', { month: 'long', year: 'numeric' })}</span>
-                    <span onClick={() => this.setState({ month: new Date(month.getFullYear(), month.getMonth() + 1)})}>&gt;</span>
+                    <span className={styles.control} onClick={() => this.setState({ month: new Date(month.getFullYear(), month.getMonth() + 1)})}>&gt;</span>
                 </div>
                 <div className={`${styles.body}`}>
                     <span className={`${styles.day}`}>M</span>

@@ -4,7 +4,8 @@ export {default as NameCard} from './components/NameCard/NameCard';
 export {default as Carousel} from './components/Carousel/Carousel';
 export {default as Row} from './components/Row/Row';
 export {default as Col} from './components/Col/Col';
+export {default as TimePicker} from './components/TimePicker/TimePicker';
+export {default as DatePicker} from './components/DatePicker/DatePicker';
 export {default as Tabs} from './components/Tabs/Tabs';
 export {default as Tab} from './components/Tab/Tab';
-export {default as TimePicker} from './components/TimePicker/TimePicker'
 export {default as CartoonNetworkSpinner} from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';

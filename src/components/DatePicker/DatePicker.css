@@ -1,6 +1,9 @@
 .datepicker {
     width: 300px;
     margin: 1em;
+    border: 1px solid #033f63;
+    box-shadow: 2px 2px 4px #888;
+    border-radius: 4px;
 }
 
 .header {
@@ -22,6 +25,8 @@
 .month {
     display: flex;
     justify-content: space-between;
+    padding: .5em;
+    border-bottom: 1px solid #033f63;
 }
 
 .day {
@@ -32,10 +37,25 @@
     border: none;
     padding: .5em;
 }
+
 span.day {
     padding: .5em 0;
 }
+
 .selected {
     background: #044f63;
     color: #fff;
+}
+
+.control {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.control:hover {
+    opacity: .6;
+}
+
+.control:active {
+    transform: translateY(1px);
 }

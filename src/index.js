@@ -130,6 +130,7 @@ class App extends React.Component {
                 <hr />
                 <h3>TimePicker</h3>
                 <TimePicker onTimePick={() => {}} />
+                <TimePicker onTimePick={() => {}} format={12} />
                 <hr />
                 <h3>DatePicker</h3>
                 <DatePicker onDatePick={() => {}} />

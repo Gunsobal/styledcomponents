@@ -1,9 +1,7 @@
 .visual {
     display: flex;
     align-items: center;
-    padding: 3em;
-    justify-content: center;
-    font-size: 2em;
+    flex-flow: row nowrap;
 }
 
 .picker {
@@ -17,12 +15,23 @@
     width: 2em;
     text-align: center;
     border-radius: .1em;
-    
-    border: 1px solid black;
+    border: 1px solid #033f63;
 }
 
 .change {
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #033f63;
     background: none;
     border: none;
+    cursor: pointer;
+    transform: scale(1.5, 1);
+}
+
+.separator {
+    margin: 0 .25em;
+}
+
+.rotate {
+    transform: scale(1.5, -1);
 }

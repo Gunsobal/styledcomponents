@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './TimePicker.css';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp } from '@fortawesome/fontawesome-free-solid';
 
 class TimePicker extends React.Component {
     constructor(props) {
@@ -68,44 +66,44 @@ class TimePicker extends React.Component {
             <div>
                 <div className={`${styles.visual}`}>
                     <span className={`${styles.picker}`}>
-                        <button className={`${styles.change}`} onClick={() => this.setHour(this.increment(this.state.hour, this.props.format))}>
-                            <FontAwesomeIcon icon={faAngleUp} />
+                        <button className={`${styles.change} ${styles.rotate}`} onClick={() => this.setHour(this.increment(this.state.hour, this.props.format))}>
+                            v
                         </button>
                         <span className={`${styles.value}`}>
                             <input type="text" value={this.state.hour} onChange={e => this.setHour(e.target.value)} className={`${styles.input}`} />
                         </span>                        
                         <button className={`${styles.change}`} onClick={() => this.setHour(this.decrement(this.state.hour, this.props.format))}>
-                            <FontAwesomeIcon icon={faAngleDown} />
+                            v
                         </button>
                     </span>
-                    <span className={`${styles.seperator}`}>
+                    <span className={`${styles.separator}`}>
                     :
                     </span>
                     <span className={`${styles.picker}`}>
-                        <button className={`${styles.change}`} onClick={() => this.setMinutes(this.increment(this.state.minutes, 59))}>
-                            <FontAwesomeIcon icon={faAngleUp} />
+                        <button className={`${styles.change} ${styles.rotate}`} onClick={() => this.setMinutes(this.increment(this.state.minutes, 59))}>
+                            v
                         </button>
                         <span className={`${styles.value}`}>
                             <input type="text" value={this.state.minutes} onChange={e => this.setMinutes(e.target.value)} className={`${styles.input}`} />
                         </span>
                         <button className={`${styles.change}`} onClick={() => this.setMinutes(this.decrement(this.state.minutes, 59))}>
-                            <FontAwesomeIcon icon={faAngleDown} />
+                            v
                         </button>
                     </span>
                     { this.props.format === 12 ?
                     <Fragment>
-                        <span className={`${styles.seperator}`}>
+                        <span className={`${styles.separator}`}>
                         {':'}
                         </span>
                         <span className={`${styles.picker}`}>
-                            <button className={`${styles.change}`} onClick={() => this.setPeriod(this.state.period === 'AM' ? 'PM' : 'AM' )}>
-                                <FontAwesomeIcon icon={faAngleUp} />
+                            <button className={`${styles.change} ${styles.rotate}`} onClick={() => this.setPeriod(this.state.period === 'AM' ? 'PM' : 'AM' )}>
+                                v
                             </button>
                             <span className={`${styles.value}`}>
                                 <input type="text" value={this.state.period} onChange={e => this.setPeriod(e.target.value)} className={`${styles.input}`} />
                             </span>
                             <button className={`${styles.change}`} onClick={() => this.setPeriod(this.state.period === 'AM' ? 'PM' : 'AM' )}>
-                                <FontAwesomeIcon icon={faAngleDown} />
+                                v
                             </button>
                         </span>
                     </Fragment>
