@@ -126,6 +126,28 @@ class App extends React.Component {
                     <Tab title="Tab 1" selectionKey={0}>
                         Tab 1 Content
                     </Tab>
+                    <Tab title="Tab 2" selectionKey={1}>
+                        Tab 2 Content
+                    </Tab>
+                    <Tab title="Tab 3" selectionKey={2}>
+                        Tab 3 Content
+                    </Tab>
+                </Tabs>
+                <Tabs
+                    onSelect={vert => this.setState({ vert })}
+                    currentSelectedTab={this.state.vert}
+                    theme="dark"
+                    layout="vertical"
+                >
+                    <Tab title="Tab 1" selectionKey={0}>
+                        Tab 1 Content
+                    </Tab>
+                    <Tab title="Tab 2" selectionKey={1}>
+                        Tab 2 Content
+                    </Tab>
+                    <Tab title="Tab 3" selectionKey={2}>
+                        Tab 3 Content
+                    </Tab>
                 </Tabs>
                 <hr />
                 <h3>TimePicker</h3>
