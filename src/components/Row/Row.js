@@ -9,6 +9,7 @@ const Row = ({children}) => (
 );
 
 Row.propTypes = {
+    /** Requires children nodes as Col components */
     children: PropTypes.node.isRequired,
 };
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NameCard.css';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone } from '@fortawesome/fontawesome-free-solid';
 
 const NameCard = ({ name, email, telephone, imageUrl }) => {
     return (
@@ -12,7 +10,7 @@ const NameCard = ({ name, email, telephone, imageUrl }) => {
                 <h5 className={styles.name}>{name}</h5>
                 <div className={styles.contact}>
                     <div className={styles.icon}>
-                        <FontAwesomeIcon icon={faEnvelope} />
+                        &diams;
                     </div>
                     <div className={styles.text}>
                         {email}
@@ -20,7 +18,7 @@ const NameCard = ({ name, email, telephone, imageUrl }) => {
                 </div>
                 <div className={styles.contact}>
                     <div className={styles.icon}>
-                        <FontAwesomeIcon icon={faPhone} />
+                        &diams;
                     </div>
                     <div className={styles.text}>
                         {telephone}

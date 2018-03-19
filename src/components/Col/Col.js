@@ -9,7 +9,10 @@ const Col = ({ size, children }) => (
 );
 
 Col.propTypes = {
-    size: PropTypes.number.isRequired,
+    /** Size of column, 1-12 */
+    size: PropTypes.number,
+
+    /** Content to put inside this column */
     children: PropTypes.node.isRequired
 }
 
